@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>
+            Geolocation
+        </title>
+    </head>
+    <body style="background-color: antiquewhite; text-align: center;">
+        <h2>Your Coordinates</h2><br>
+        <button id="axis">Click Me</button><br><br>
+        <div id="coordinates"></div>
+        <script>
+            document.getElementById('axis').addEventListener('click',navigation);
+
+            function navigation(){
+                let div = document.getElementById('coordinates');
+                if(navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(function(position){
+                div.innerText = `Latitude: ${position.coords.latitude}, Longitude: ${position.coords.longitude}`;
+            });
+        }
+    }
+        </script>
+    </body>
+</html>

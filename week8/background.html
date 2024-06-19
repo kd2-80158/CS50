@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>
+            Background color and Font Size
+        </title>
+        <style>
+            body {
+              /* font-family: Arial, sans-serif; */
+              text-align: center;
+              padding: 100px;
+}
+
+            #font-size-slider {
+               width: 400px;
+               margin-top: 30px;
+}
+
+        </style>
+    </head>
+    <h1 id="heading"> Change Background color and Font Size</h1>
+    <body>
+        <button id="red">R</button>
+        <button id="green">G</button>
+        <button id="blue">B</button>
+        <br>
+        <label for="fontsize-slider">Font Size:</label>
+        <input type="range" id="fontsize-slider" min="10" max="100" value="30">
+
+        <script>
+            let body = document.querySelector('body');
+            let slider = document.getElementById('fontsize-slider');
+            let heading = document.getElementById('heading');
+            
+            document.querySelector('#red').addEventListener('click',function(){
+                body.style.backgroundColor = 'red';
+            });
+            document.querySelector('#green').addEventListener('click',function(){
+                body.style.backgroundColor = 'green';
+            });
+            document.querySelector('#blue').addEventListener('click', function(){
+                body.style.backgroundColor = 'blue';
+            });
+            heading.style.fontSize = `${slider.value}px`;
+
+            slider.addEventListener('input',function(){
+                heading.style.fontSize = `${slider.value}px`;
+            });
+        </script>
+    </body>
+</html>

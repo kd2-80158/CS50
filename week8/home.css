@@ -1,0 +1,13 @@
+.centered{
+    text-align: center;
+    color: red;
+}
+header{
+    font-size: medium;
+}
+main{
+    font-size: large;
+}
+footer{
+    font-size: small;
+}

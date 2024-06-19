@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>
+            Blink
+        </title>
+    </head>
+    <body style="text-align: center">
+        <script>
+            function blink()
+            {
+                let body = document.querySelector('body');
+                if(body.style.visibility=='hidden')
+                {
+                    body.style.visibility = 'visible';
+                }
+                else{
+                    body.style.visibility = 'hidden';
+                }
+            }
+            //blink every 500 ms
+        window.setInterval(blink,300);
+        </script>
+        <h2>Excited Opportunity for Freshers!!</h2>
+    </body>
+</html>
